@@ -9,7 +9,7 @@ public class Rfc865UdpClient {
         // 1. Open UDP socket
         //
         DatagramSocket socket;
-        String Msg = "Hello Server";
+        String Msg = "Aide Iskandar, TS8, 172.21.149.111";
         byte[] SendingBytes = Msg.getBytes();
         byte[] buffer = new byte[65535];
 
