@@ -20,7 +20,8 @@ public class Rfc865UdpClient {
         InetAddress IP;
         try{
             //10.27.228.244 is IP address of my personal computer acting as a server
-            IP = InetAddress.getByName("10.27.228.244");
+            //IP = InetAddress.getByName("10.27.228.244");
+            IP = InetAddress.getByName("HWLab1");
         }
         catch (UnknownHostException e){
             System.out.println("Cannot get IP address");

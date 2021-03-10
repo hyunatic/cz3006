@@ -10,7 +10,7 @@ public class Rfc865UdpServer {
         // 1. Open UDP socket at well-known port
         //
         DatagramSocket socket;
-        String Msg = "Hello Client";
+        String Msg = "Hello Client, Im from 10.27.228.244";
         byte[] SendingBytes = Msg.getBytes();
 
         // QOTD Port number
