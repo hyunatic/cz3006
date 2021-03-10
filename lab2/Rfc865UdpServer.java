@@ -2,6 +2,7 @@ package lab2;
 
 import java.net.*;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class Rfc865UdpServer {
     public static void main(String[] argv) {
