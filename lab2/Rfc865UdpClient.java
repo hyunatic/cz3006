@@ -2,7 +2,6 @@ package lab2;
 
 import java.net.*;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 
 public class Rfc865UdpClient {
     public static void main(String[] argv) {
@@ -20,7 +19,7 @@ public class Rfc865UdpClient {
         // Neighbour IP address
         InetAddress IP;
         try{
-            IP = InetAddress.getByName("192.168.2.29");
+            IP = InetAddress.getByName("10.27.228.244");
         }
         catch (UnknownHostException e){
             System.out.println("Cannot get IP address");

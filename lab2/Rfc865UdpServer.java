@@ -2,7 +2,6 @@ package lab2;
 
 import java.net.*;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 
 public class Rfc865UdpServer {
     public static void main(String[] argv) {
@@ -28,7 +27,6 @@ public class Rfc865UdpServer {
                 //
                 // 2. Listen for UDP request from client
                 //
-                System.out.println("Server started");
                 DatagramPacket request = new DatagramPacket(receivingByte, receivingByte.length);
                 socket.receive(request);
                 //
@@ -39,10 +37,11 @@ public class Rfc865UdpServer {
 
                 // Decoding the byte into UTF8
                 String clientMsg = new String(request.getData(), StandardCharsets.UTF_8);
-                if (clientMsg.equals("Hello Server")) {
-                    System.out.println("Message Received from client");
-                    socket.send(reply);
-                }
+                if(new String(
+						 request.getData(), 0, request.getLength()).equals("Hello Server")) {
+					 System.out.println("Message received");
+					 socket.send(reply);
+				 }
             } catch (IOException e) {
             }
         }
